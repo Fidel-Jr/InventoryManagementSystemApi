@@ -9,7 +9,7 @@ namespace InventoryMSApi.Jobs
         private readonly ILogger<BackgroundJob> _logger;
         private readonly IServiceScopeFactory _scopeFactory;
         private Timer? _timer;
-
+        const int threshold = 10;
         public BackgroundJob(ILogger<BackgroundJob> logger, IServiceScopeFactory scopeFactory)
         {
             _logger = logger;
@@ -33,7 +33,7 @@ namespace InventoryMSApi.Jobs
 
                 _logger.LogInformation("🔍 Checking low stock products...");
 
-                var lowStockProducts = await productService.GetLowStockProductsAsync(10);
+                var lowStockProducts = await productService.GetLowStockProductsAsync(threshold);
 
                 if (!lowStockProducts.Any())
                 {

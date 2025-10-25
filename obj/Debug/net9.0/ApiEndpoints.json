@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "InventoryMSApi.Controllers.ProductController",
+    "ContainingType": "InventoryMSApi.Controllers.ProductsController",
     "Method": "GetAllProducts",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InventoryMSApi.Controllers.ProductController",
+    "ContainingType": "InventoryMSApi.Controllers.ProductsController",
     "Method": "AddProduct",
-    "RelativePath": "api/Product",
+    "RelativePath": "api/Products",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,9 +26,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InventoryMSApi.Controllers.ProductController",
+    "ContainingType": "InventoryMSApi.Controllers.ProductsController",
     "Method": "GetProductById",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -42,9 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InventoryMSApi.Controllers.ProductController",
+    "ContainingType": "InventoryMSApi.Controllers.ProductsController",
     "Method": "UpdateProduct",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -63,9 +63,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "InventoryMSApi.Controllers.ProductController",
+    "ContainingType": "InventoryMSApi.Controllers.ProductsController",
     "Method": "DeleteProduct",
-    "RelativePath": "api/Product/{id}",
+    "RelativePath": "api/Products/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

@@ -56,7 +56,7 @@ namespace InventoryMSApi.Controllers
         public async Task<IActionResult> DeleteProduct(int id)
         {
             if (!ModelState.IsValid)
-            {
+            {   
                 return BadRequest();
             }
             await _productService.DeleteProductAsync(id);

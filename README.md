@@ -1,96 +1,76 @@
-**# InventoryManagementSystemApi
-Scalable and Secured API for any Product Inventory Management System
-**
+Inventory Management System API
+
+A scalable and secure API for managing product inventory with automated stock alerts.
 
 🚀 Features
-✅ Product Management
-Create, Read, Update, and Delete (CRUD) products
 
-Track stock levels per product
+✔ Product Management
+• Full CRUD operations
+• Track stock levels and quantities
 
-✅ Low Stock Alert System
-Background job runs every 1 minute
-Detects products below a set threshold (default: 10)
-Saves alerts to the Notifications table in the database
+✔ Low Stock Alert System
+• Background job runs every 1 minute
+• Detects products below threshold (default: 10)
+• Records alerts in the Notifications table
 
-✅ Clean Architecture
-Controller → Service → Repository layers
-EF Core for data access
-Dependency Injection for maintainability
+✔ Clean Architecture
+• Controller → Service → Repository pattern
+• EF Core for database operations
+• Fully dependency-injected and maintainable
 
-✅ Extensible
-Easy to plug in Email/SMS or other notification systems later
-Follows best practices for background processing and scoped services
+✔ Extensible Design
+• Easy add-on for Email/SMS/Push notifications
+• Ideal for scaling into enterprise-grade systems
 
-
-⚙️ Technologies Used
-ASP.NET Core 9.0
-Entity Framework Core
-PostgreSQL
-BackgroundService / IHostedService
-Dependency Injection
-
-
-🛠️ Getting Started
-1️⃣ Clone the repository
+🧰 Tech Stack
+Technology	Usage
+ASP.NET Core 9.0	API Framework
+Entity Framework Core	ORM
+PostgreSQL	Database
+BackgroundService / IHostedService	Automated tasks
+Dependency Injection	Architecture
+⚙️ Getting Started
+✅ 1️⃣ Clone the Repository
 git clone https://github.com/<your-username>/InventoryManagementAPI.git
 cd InventoryManagementAPI
 
+✅ 2️⃣ Configure the Database
 
-🛠️ 2️⃣ Configure the Database
-This project uses PostgreSQL as the database.
-Open your appsettings.json and update your connection string like this:
+Update appsettings.json:
+
 "ConnectionStrings": {
   "DefaultConnection": "Host=localhost;Port=5432;Database=inventory_db;Username=postgres;Password=yourpassword"
 }
 
-💡 Notes
-Make sure PostgreSQL is installed and running locally.
 
-Replace yourpassword with your actual PostgreSQL password.
+⚠ Make sure PostgreSQL is installed and running
+Replace yourpassword with your actual credentials
 
-If you’re using pgAdmin or a hosted PostgreSQL (e.g., Supabase, Neon, Render, etc.), update the connection details accordingly.
-
-You can change the database name (inventory_db) to whatever you prefer.
-
-To apply migrations and set up your database, run the following commands in your terminal:
+Apply migrations:
 
 dotnet ef database update
 
-This will create all required tables automatically.
-
-
-4️⃣ Run the API
+✅ 3️⃣ Run the API
 dotnet run
 
-You should see logs like:
-info: LowStockBackgroundJob[0]
-      ⏰ Background job started.
-info: LowStockBackgroundJob[0]
-      🔍 Checking low stock...
-By default, the job runs every hour and checks for any product with quantity < 10.
 
-🔁 Background Job Logic
+You should see:
 
-Every 1 minute:
+⏰ Background job started.
+🔍 Checking low stock...
 
-The background job runs automatically.
+🔁 Low Stock Background Job
 
-It queries the database for products with Quantity < 10.
+Runs every 1 minute:
 
-For each low-stock product, it creates a record in the Notifications table.
+Checks products with Quantity < 10
 
-This happens silently in the background — no manual trigger needed.
+Inserts a notification into DB
 
-🧩 Example Notification Record
+Sample Notification Record
 Id	Message	CreatedAt	IsRead
-1	⚠️ Product 'Milk' is low on stock (Qty: 5).	2025-10-22T12:00:00Z	false
+1	⚠️ Product 'Milk' is low (Qty: 5)	2025-10-22T12:00:00Z	False
+🤝 Contributing
 
-🧑‍💻 Author
-
-[Your Name]
-📧 fidelsalongacolinares04.com
-]
-🌐 yourportfolio.com
-
-If you found this useful, please ⭐ star the repo on GitHub!
+Pull requests are welcome!
+For major changes, please open an issue to discuss what you'd like to modify.

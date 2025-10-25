@@ -7,10 +7,10 @@ namespace InventoryMSApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private readonly ProductService _productService;
-        public ProductController(ProductService productService)
+        public ProductsController(ProductService productService)
         {
             _productService = productService;
         }

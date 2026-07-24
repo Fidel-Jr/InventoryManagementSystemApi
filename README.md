@@ -15,15 +15,6 @@ A simple, scalable and secure API for managing product inventory with automated 
   - Detects products below threshold (default: **10**)
   - Records alerts in the `Notifications` table
 
-- **Clean Architecture**
-  - Controller → Service → Repository pattern  
-  - EF Core for database operations  
-  - Fully dependency-injected and maintainable  
-
-- **Extensible Design**
-  - Easy integration for Email / SMS / Push notifications  
-  - Enterprise-ready structure  
-
 ---
 
 ## 🧰 Tech Stack
